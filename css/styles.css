@@ -73,7 +73,7 @@ body {
     text-decoration: underline;
     color: #bbf330;
   }
-  .btn-green {
+  .btn-red {
     font-weight: 500;
     font-size: 13px;
     line-height: 1.5;
@@ -105,14 +105,13 @@ body {
     line-height: 1.5;
     margin-bottom: 40px;
   }
-  .btn-green {
-  }
+  
   .hero-wrapper {
     max-width: 511px;
     margin-right: 143px;
   }
   
-  .salad {
+  .gym-1 {
     border-radius: 100%;
     border: 26px solid #c87018 ;
   }
