@@ -302,9 +302,10 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
+    justify-content: center;
   }
   .fav-item {
-    width: calc((100% - 64px) / 3);
+    width: calc((100% - 64px) / 4);
     border: 16px solid #c87018 ;
     border-radius: 197px;
     height: 397px;
