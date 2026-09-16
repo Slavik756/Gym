@@ -1,240 +1,740 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gym</title>
-  <link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
-  <header class="header">
-  <div class="container">
-    <a class="logo" href="./index.html">
-      <img src="./img/logo-1.png" alt="logo" width="66" height="52" />
-    </a>
-<nav class="main-nav">
-<ul class="main-nav-list">
-  <li><a class="nav-item"  href="">Home</a></li>
-  <li><a class="nav-item"  href="">About</a></li>
-  <li><a class="nav-item"  href="">Service</a></li>
-  <li><a class="nav-item"  href="">Menu</a></li>
-  <li><a class="nav-item"  href="">Contact</a></li>
-</ul>
-</nav>
-<button class="btn-red" type="button">Gym Now</button>
-  </div>
-  </header>
-  <main>
-    <section class="section-one">
-      <div class="container">
-        <div class="hero-wrapper">
-          <h1 class="main-header">Join Our Gym!</h1>
-          <p class="section-one-text">Start your journey to health and strength today.</p>
-          <button class="btn-red" type="button">Sign Up</button>
-        </div>
-        <img class="gym-1" src="./img/gym-1.png" alt="gym-1" width="528"
-        height="528"/>
-      </div>
-</section>
-<section class="section-two">
-<div class="container">
-  <img src="./img/gym-2.png" alt="gym-2" width="502" height="502"/>
-  <div class="about-wrapper">
-    <h2 class="section-two-header">What’s Special About Our Gym?</h2>
-    <p class="section-two-text">
-      Our gym offers state-of-the-art facilities, professional trainers, and a motivating environment to help you achieve your fitness goals. Whether you're looking to build strength, improve your flexibility, or work on your cardio, we have everything you need to succeed.
-    </p>
-    <ul class="benefit-list">
-      <li class="about-items">
-        <img
-          src="./img/Professional.png"
-          alt="Professional Trainers"
-          width="25"
-          height="25"
-        />
-        <h3 class="benefit-header">Professional Trainers</h3>
-        <p class="benefit-text">
-          Our certified trainers are here to guide you every step of the way, whether you're a beginner or a seasoned athlete.
-        </p>
-      </li>
-      <li class="about-items">
-        <img
-          src="./img/Modern.png"
-          alt="Modern Equipment"
-          width="48"
-          height="48"
-        />
-        <h3 class="benefit-header">Modern Equipment</h3>
-        <p class="benefit-text">
-          We provide the latest gym equipment to ensure you have the best tools for your fitness journey. From weights to cardio machines, we have it all.
-        </p>
-      </li>
-    </ul>
-    <button class="section-two-btn" type="button">Gym Now</button>
-  </div>
-</div>
-</section>
-<section class="section-three">
-    <div class="container">
-      <h2 class="section-three-header">Our Popular Workouts</h2>
-      <p class="section-three-text">
-        Which workout do you prefer?
-    </p>
-      <ul class="favotite-list">
-        <li class="fav-item">
-          <img
-            src="./img/Strength.png"
-            alt="Strength Training"
-            width="315"
-            height="315"
-          />
-        </li>
-        <li class="fav-item">
-          <img
-            src="./img/Cardio.png"
-            alt="Cardio"
-            width="315"
-            height="315"
-          />
-        </li>
-        <li class="fav-item">
-          <img
-            src="./img/Yoga.png"
-            alt="Yoga"
-            width="315"
-            height="315"
-          />
-        </li>
-        <li class="fav-item">
-          <img
-            src="./img/Pilates.png"
-            alt="Pilates"
-            width="315"
-            height="315"
-          />
-        </li>
-        <li class="fav-item">
-          <img
-            src="./img/Boxing.png"
-            alt="Boxing"
-            width="315"
-            height="315"
-          />
-        </li>
-        <li class="fav-item">
-          <img
-            src="./img/Group.png"
-            alt="Group Fitness"
-            width="315"
-            height="315"
-          />
-        </li>
-       
-      </ul>
-    </div>
-  </section>
-  <section class="section-four">
-    <div class="container">
-      <h2 class="section-four-header">What our Customers Say</h2>
-      <p class="section-four-text">
-        Don't just take our word for it - see what our satisfied customers
-        have to say
-      </p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <ul class="review-list">
-        <li class="review-item">
-          <div class="review-content">
-            <img
-              class="img-svg-four"
-              src="./img/Stars.svg"
-              alt="5 stars"
-              width="101"
-              height="18"
-            />
-            <h3 class="review">
-              “The best gym I’ve ever joined! <br>
-              The trainers are incredibly knowledgeable and always motivate me to push my limits. The atmosphere is fantastic, and the equipment is top-notch.”
-            </h3>
-            <div class="card-photo-name">
-              <img
-                src="./img/man.png"
-                alt="man"
-                width="48"
-                height="48"
-              />
-              <h4 class="reviewer-name">Dmitry Ivanov</h4>
-              <p class="additional-text">Member since</p>
+    <meta
+      name="description"
+      content="PowerGym — modern fitness club with professional trainers, modern equipment and effective workout programs."
+    />
+
+    <title>PowerGym — Train Strong. Live Strong.</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+
+    <header class="header" id="home">
+      <div class="container header-container">
+        <a href="#home" class="logo">
+          <img
+            src="./img/logo-1.png"
+            alt="PowerGym logo"
+            width="66"
+            height="52"
+          />
+          <span>POWER<span>GYM</span></span>
+        </a>
+
+        <nav class="main-nav" id="mainNav">
+          <ul class="main-nav-list">
+            <li><a class="nav-item active" href="#home">Home</a></li>
+            <li><a class="nav-item" href="#about">About</a></li>
+            <li><a class="nav-item" href="#workouts">Workouts</a></li>
+            <li><a class="nav-item" href="#programs">Programs</a></li>
+            <li><a class="nav-item" href="#reviews">Reviews</a></li>
+            <li><a class="nav-item" href="#contact">Contact</a></li>
+          </ul>
+
+          <button class="mobile-join" type="button">Join now</button>
+        </nav>
+
+        <a href="#programs" class="btn btn-primary header-btn"> Join now </a>
+
+        <button
+          class="burger"
+          id="burger"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- ================= HERO ================= -->
+
+      <section class="hero">
+        <div class="container hero-container">
+          <div class="hero-content">
+            <span class="eyebrow">
+              <span class="eyebrow-dot"></span>
+              Premium fitness club
+            </span>
+
+            <h1>
+              Build your
+              <span>strongest</span>
+              version.
+            </h1>
+
+            <p class="hero-text">
+              Train smarter, feel stronger and become the best version of
+              yourself. Professional trainers, premium equipment and a community
+              that keeps you moving.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#programs" class="btn btn-primary">
+                Start training
+                <span>→</span>
+              </a>
+
+              <a href="#workouts" class="btn btn-outline"> Explore workouts </a>
+            </div>
+
+            <div class="hero-rating">
+              <div class="avatars">
+                <img src="./img/man.png" alt="Gym member" />
+                <img src="./img/woman.png" alt="Gym member" />
+                <img src="./img/man.png" alt="Gym member" />
+                <span>+</span>
+              </div>
+
+              <div>
+                <strong>2,500+</strong>
+                <p>active members</p>
+              </div>
             </div>
           </div>
-        </li>
-        <li class="review-item">
-          <div class="review-content">
-            <img
-              class="img-svg-four"
-              src="./img/Stars.svg"
-              alt="5 stars"
-              width="101"
-              height="18"
-            />
-            <h3 class="review">
-              “I love the variety of classes available! <br> From yoga to high-intensity interval training, there's something for everyone. The staff is friendly, <br> and the gym always feels welcoming.”
-            </h3>
-            <div class="card-photo-name">
-              <img
-                src="./img/woman.png"
-                alt="woman"
-                width="48"
-                height="48"
-              />
-              <h4 class="reviewer-name">Emily Davis</h4>
-              <p class="additional-text">Yoga Enthusiast</p>
+
+          <div class="hero-image-wrapper">
+            <div class="hero-glow"></div>
+
+            <div class="hero-image">
+              <img src="./img/gym-1.png" alt="Person training in the gym" />
+            </div>
+
+            <div class="hero-badge badge-top">
+              <strong>15+</strong>
+              <span>Years experience</span>
+            </div>
+
+            <div class="hero-badge badge-bottom">
+              <div class="pulse-icon">✓</div>
+              <div>
+                <strong>100%</strong>
+                <span>Motivation</span>
+              </div>
             </div>
           </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-  <section class="section-five">
-    <div class="container">
-      <h2 class="section-five-header">Subscribe To Get Special Offers</h2>
-      <p class="sectin-five-text">
-        Subscribe to our newsletter and get 15% off your first workout at our gym!
-      </p>
-      <input type="text" placeholder="Enter your email" />
-      <button class="btn-red" type="submit">Subscribe</button>
-    </div>
-  </section>
-</main>
-<footer>
-<div class="container">
-<a href="./index.html">
-    <img src="./img/logo-1.png" alt="logo" width="66" height="52">
-</a>
-<ul class="footer-list">
-    <li><a class="nav-item" href="">Home</a></li>
-    <li><a class="nav-item" href="">About</a></li>
-    <li><a class="nav-item" href="">Service</a></li>
-    <li><a class="nav-item" href="">Menu</a></li>
-    <li><a class="nav-item" href="">Contact</a></li>
-</ul>
-<h4 class="footer-text">Subscribe</h4>
-<input type="text" placeholder="Enter your email" />
-<button class="footer-btn" type="submit">Subscribe</button>
-<p class="policy-info">
-    By subscribing you agree to with our
-<a class="policy-info-accent" href="">Privacy Policy</a>
-</p>
-<ul class="footer-list-green">
-    <li><a class="footer-list-green-link" href="">Privacy Policy</a></li>
-    <li>
-        <a class="footer-list-green-link" href="">Terms of Service</a>
-    </li>
-    <li>
-        <a class="footer-list-green-link" href="">Cookies Settings</a>
-    </li>
-    </ul>
-        <p class="footer-info">2022 FoodSta. All right reserved.</p>
-</div>
-</footer>
-</body>
+        </div>
+      </section>
+
+      <!-- ================= STATS ================= -->
+
+      <section class="stats">
+        <div class="container stats-grid">
+          <div class="stat">
+            <strong>2.5K<span>+</span></strong>
+            <p>Happy members</p>
+          </div>
+
+          <div class="stat">
+            <strong>15<span>+</span></strong>
+            <p>Years experience</p>
+          </div>
+
+          <div class="stat">
+            <strong>35<span>+</span></strong>
+            <p>Expert trainers</p>
+          </div>
+
+          <div class="stat">
+            <strong>40<span>+</span></strong>
+            <p>Weekly classes</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ABOUT ================= -->
+
+      <section class="about section" id="about">
+        <div class="container about-grid">
+          <div class="about-images">
+            <div class="about-main-image image-frame">
+              <img src="./img/gym-2.png" alt="Modern gym" />
+            </div>
+
+            <div class="about-small-image image-frame">
+              <img src="./img/Modern.png" alt="Modern gym equipment" />
+            </div>
+
+            <div class="experience-card">
+              <strong>15</strong>
+              <span>Years of<br />excellence</span>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <span class="section-label">ABOUT POWERGYM</span>
+
+            <h2>
+              More than a gym.
+              <span>A lifestyle.</span>
+            </h2>
+
+            <p class="section-description">
+              We created PowerGym for people who don't want ordinary. Our
+              mission is to give you the environment, equipment and support you
+              need to reach your personal goals.
+            </p>
+
+            <div class="benefits">
+              <article class="benefit">
+                <div class="benefit-icon">
+                  <img src="./img/Professional.png" alt="" />
+                </div>
+                <div>
+                  <h3>Professional trainers</h3>
+                  <p>
+                    Certified coaches create personalized plans for your goals.
+                  </p>
+                </div>
+              </article>
+
+              <article class="benefit">
+                <div class="benefit-icon">
+                  <img src="./img/Modern.png" alt="" />
+                </div>
+                <div>
+                  <h3>Premium equipment</h3>
+                  <p>
+                    Modern machines and free weights for every type of workout.
+                  </p>
+                </div>
+              </article>
+
+              <article class="benefit">
+                <div class="benefit-icon">
+                  <span>24</span>
+                </div>
+                <div>
+                  <h3>Open 24/7</h3>
+                  <p>Your schedule shouldn't stop your progress.</p>
+                </div>
+              </article>
+
+              <article class="benefit">
+                <div class="benefit-icon">
+                  <span>★</span>
+                </div>
+                <div>
+                  <h3>Friendly community</h3>
+                  <p>Train with people who motivate you to keep going.</p>
+                </div>
+              </article>
+            </div>
+
+            <a href="#programs" class="btn btn-dark">
+              Discover PowerGym
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= WORKOUTS ================= -->
+
+      <section class="workouts section" id="workouts">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="section-label">TRAIN YOUR WAY</span>
+
+              <h2>Popular <span>workouts</span></h2>
+            </div>
+
+            <p>
+              Whether you want to build muscle, improve your endurance or simply
+              feel better, we have a workout for you.
+            </p>
+          </div>
+
+          <div class="workout-grid">
+            <article class="workout-card">
+              <div class="workout-image">
+                <img src="./img/Strength.png" alt="Strength training" />
+              </div>
+
+              <div class="workout-info">
+                <span>01</span>
+                <h3>Strength Training</h3>
+                <p>Build muscle, power and confidence.</p>
+                <a href="#programs">Explore →</a>
+              </div>
+            </article>
+
+            <article class="workout-card">
+              <div class="workout-image">
+                <img src="./img/Cardio.png" alt="Cardio workout" />
+              </div>
+
+              <div class="workout-info">
+                <span>02</span>
+                <h3>Cardio</h3>
+                <p>Improve endurance and burn calories.</p>
+                <a href="#programs">Explore →</a>
+              </div>
+            </article>
+
+            <article class="workout-card">
+              <div class="workout-image">
+                <img src="./img/Yoga.png" alt="Yoga" />
+              </div>
+
+              <div class="workout-info">
+                <span>03</span>
+                <h3>Yoga</h3>
+                <p>Improve flexibility and find your balance.</p>
+                <a href="#programs">Explore →</a>
+              </div>
+            </article>
+
+            <article class="workout-card">
+              <div class="workout-image">
+                <img src="./img/Pilates.png" alt="Pilates" />
+              </div>
+
+              <div class="workout-info">
+                <span>04</span>
+                <h3>Pilates</h3>
+                <p>Strengthen your core and improve posture.</p>
+                <a href="#programs">Explore →</a>
+              </div>
+            </article>
+
+            <article class="workout-card">
+              <div class="workout-image">
+                <img src="./img/Boxing.png" alt="Boxing" />
+              </div>
+
+              <div class="workout-info">
+                <span>05</span>
+                <h3>Boxing</h3>
+                <p>Release energy and develop speed.</p>
+                <a href="#programs">Explore →</a>
+              </div>
+            </article>
+
+            <article class="workout-card">
+              <div class="workout-image">
+                <img src="./img/Group.png" alt="Group fitness" />
+              </div>
+
+              <div class="workout-info">
+                <span>06</span>
+                <h3>Group Fitness</h3>
+                <p>Train together and stay motivated.</p>
+                <a href="#programs">Explore →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PROGRAMS ================= -->
+
+      <section class="programs section" id="programs">
+        <div class="container">
+          <div class="center-heading">
+            <span class="section-label">MEMBERSHIP</span>
+
+            <h2>Choose your <span>plan</span></h2>
+
+            <p>Simple membership options designed for every fitness level.</p>
+          </div>
+
+          <div class="pricing-grid">
+            <article class="price-card">
+              <span class="plan-name">STARTER</span>
+
+              <h3>$29<span>/month</span></h3>
+
+              <p class="plan-description">
+                Everything you need to start your fitness journey.
+              </p>
+
+              <ul>
+                <li>✓ Full gym access</li>
+                <li>✓ Locker room access</li>
+                <li>✓ Basic fitness assessment</li>
+                <li>✓ Free Wi-Fi</li>
+              </ul>
+
+              <a href="#contact" class="btn btn-outline-dark">
+                Choose Starter
+              </a>
+            </article>
+
+            <article class="price-card featured">
+              <div class="popular">MOST POPULAR</div>
+
+              <span class="plan-name">PRO</span>
+
+              <h3>$49<span>/month</span></h3>
+
+              <p class="plan-description">
+                The complete experience for serious progress.
+              </p>
+
+              <ul>
+                <li>✓ Everything in Starter</li>
+                <li>✓ Unlimited group classes</li>
+                <li>✓ 2 personal training sessions</li>
+                <li>✓ Nutrition consultation</li>
+                <li>✓ Sauna & recovery area</li>
+              </ul>
+
+              <a href="#contact" class="btn btn-primary"> Choose Pro </a>
+            </article>
+
+            <article class="price-card">
+              <span class="plan-name">ELITE</span>
+
+              <h3>$79<span>/month</span></h3>
+
+              <p class="plan-description">
+                Maximum support and personalized attention.
+              </p>
+
+              <ul>
+                <li>✓ Everything in Pro</li>
+                <li>✓ Unlimited personal training</li>
+                <li>✓ Personalized nutrition plan</li>
+                <li>✓ Monthly progress analysis</li>
+              </ul>
+
+              <a href="#contact" class="btn btn-outline-dark"> Choose Elite </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TRAINERS ================= -->
+
+      <section class="trainers section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="section-label">MEET THE TEAM</span>
+              <h2>Train with the <span>best</span></h2>
+            </div>
+
+            <p>
+              Our coaches are here to help you train safely, efficiently and
+              consistently.
+            </p>
+          </div>
+
+          <div class="trainer-grid">
+            <article class="trainer-card">
+              <div class="trainer-image">
+                <img src="./img/man.png" alt="Personal trainer" />
+              </div>
+
+              <div class="trainer-info">
+                <h3>Alex Morgan</h3>
+                <p>Strength Coach</p>
+
+                <div class="trainer-meta">
+                  <span>8 years experience</span>
+                  <span>★ 4.9</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="trainer-card">
+              <div class="trainer-image">
+                <img src="./img/woman.png" alt="Fitness trainer" />
+              </div>
+
+              <div class="trainer-info">
+                <h3>Sarah Wilson</h3>
+                <p>Yoga & Mobility</p>
+
+                <div class="trainer-meta">
+                  <span>7 years experience</span>
+                  <span>★ 5.0</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="trainer-card">
+              <div class="trainer-image">
+                <img src="./img/man.png" alt="Fitness coach" />
+              </div>
+
+              <div class="trainer-info">
+                <h3>Daniel Carter</h3>
+                <p>Performance Coach</p>
+
+                <div class="trainer-meta">
+                  <span>10 years experience</span>
+                  <span>★ 4.9</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= REVIEWS ================= -->
+
+      <section class="reviews section" id="reviews">
+        <div class="container">
+          <div class="center-heading light">
+            <span class="section-label">MEMBER STORIES</span>
+
+            <h2>
+              Real people.
+              <span>Real results.</span>
+            </h2>
+
+            <p>
+              Thousands of members trust PowerGym to help them become stronger
+              every day.
+            </p>
+          </div>
+
+          <div class="review-grid">
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+
+              <blockquote>
+                “The best gym I've ever joined. The trainers are incredibly
+                knowledgeable and always push me to do better.”
+              </blockquote>
+
+              <div class="review-person">
+                <img src="./img/man.png" alt="Dmitry Ivanov" />
+
+                <div>
+                  <strong>Dmitry Ivanov</strong>
+                  <span>Member since 2021</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+
+              <blockquote>
+                “I love the variety of classes. From yoga to high-intensity
+                training, there is always something exciting to try.”
+              </blockquote>
+
+              <div class="review-person">
+                <img src="./img/woman.png" alt="Emily Davis" />
+
+                <div>
+                  <strong>Emily Davis</strong>
+                  <span>Yoga enthusiast</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+
+              <blockquote>
+                “After six months I feel stronger, healthier and much more
+                confident. The atmosphere is amazing.”
+              </blockquote>
+
+              <div class="review-person">
+                <img src="./img/man.png" alt="Michael Brown" />
+
+                <div>
+                  <strong>Michael Brown</strong>
+                  <span>Member since 2023</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FAQ ================= -->
+
+      <section class="faq section">
+        <div class="container faq-grid">
+          <div>
+            <span class="section-label">FAQ</span>
+
+            <h2>
+              Questions?
+              <span>We've got answers.</span>
+            </h2>
+
+            <p>Everything you need to know before your first workout.</p>
+
+            <a href="#contact" class="btn btn-dark"> Ask us anything → </a>
+          </div>
+
+          <div class="faq-list">
+            <details open>
+              <summary>
+                Do I need previous gym experience?
+                <span>+</span>
+              </summary>
+
+              <p>
+                Not at all. Our trainers work with beginners and experienced
+                athletes. We'll help you start at the right level.
+              </p>
+            </details>
+
+            <details>
+              <summary>
+                Is the gym open 24/7?
+                <span>+</span>
+              </summary>
+
+              <p>
+                Yes. Members have access to the gym 24 hours a day, 7 days a
+                week.
+              </p>
+            </details>
+
+            <details>
+              <summary>
+                Can I book a personal trainer?
+                <span>+</span>
+              </summary>
+
+              <p>
+                Absolutely. Personal training sessions can be booked directly
+                through our reception.
+              </p>
+            </details>
+
+            <details>
+              <summary>
+                Can I try the gym before joining?
+                <span>+</span>
+              </summary>
+
+              <p>
+                Yes. Contact our team and we'll arrange a free introductory
+                visit.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CTA ================= -->
+
+      <section class="cta" id="contact">
+        <div class="container">
+          <div class="cta-content">
+            <span class="section-label">START TODAY</span>
+
+            <h2>
+              Your strongest self
+              <span>is waiting.</span>
+            </h2>
+
+            <p>Join PowerGym today and get 15% off your first month.</p>
+
+            <div class="cta-form">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                aria-label="Email address"
+              />
+
+              <button class="btn btn-primary" type="button">
+                Get started
+                <span>→</span>
+              </button>
+            </div>
+
+            <small>
+              No spam. Just useful fitness tips and special offers.
+            </small>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="#home" class="logo">
+              <img
+                src="./img/logo-1.png"
+                alt="PowerGym logo"
+                width="66"
+                height="52"
+              />
+              <span>POWER<span>GYM</span></span>
+            </a>
+
+            <p>Train hard. Stay healthy. Become unstoppable.</p>
+
+            <div class="socials">
+              <a href="#">
+                <img src="img/facebook.svg" alt="Facebook" />
+              </a>
+
+              <a href="#">
+                <img src="img/instagram.svg" alt="Instagram" />
+              </a>
+
+              <a href="#">
+                <img src="img/x.svg" alt="X" />
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3>Explore</h3>
+
+            <a href="#about">About us</a>
+            <a href="#workouts">Workouts</a>
+            <a href="#programs">Membership</a>
+            <a href="#reviews">Reviews</a>
+          </div>
+
+          <div class="footer-column">
+            <h3>Support</h3>
+
+            <a href="#">Contact us</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms of service</a>
+            <a href="#">Cookies</a>
+          </div>
+
+          <div class="footer-column">
+            <h3>Contact</h3>
+
+            <p>123 Fitness Street</p>
+            <p>New York, NY 10001</p>
+            <a href="tel:+10000000000">+1 000 000 0000</a>
+            <a href="mailto:hello@powergym.com"> hello@powergym.com </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 PowerGym. All rights reserved.</p>
+
+          <p>Made for stronger people.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
 </html>
