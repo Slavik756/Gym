@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>document.documentElement.classList.add("js");</script>
+    <meta name="description" content="Choose a PowerGym class or plan a first visit. A two-step fitness booking demo with a clear session summary." />
+    <title>Book a session — PowerGym</title>
+    <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/styles/base.css" />
+    <link rel="stylesheet" href="./assets/styles/components/header.css" />
+    <link rel="stylesheet" href="./assets/styles/pages/booking.css" />
+  </head>
+  <body class="inner-page booking-page" data-page="booking">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <!-- shared-header -->
+
+    <main id="main-content" class="booking-main">
+      <div class="container booking-container">
+        <a class="booking-back" href="./schedule.html"><span aria-hidden="true">←</span> Back to schedule</a>
+        <div class="booking-heading">
+          <div>
+            <span class="section-label">Your next move</span>
+            <h1>A stronger week<br />starts <span>here.</span></h1>
+          </div>
+          <p>Find your session, bring your ambition. We’ll help with the rest.</p>
+        </div>
+
+        <div class="booking-fallback" id="booking-fallback">
+          <p>The booking form is unavailable. Try refreshing this page with JavaScript enabled. You can still <a href="./index.html#workouts">explore workouts</a> or <a href="./index.html#programs">compare memberships</a>.</p>
+        </div>
+
+        <div class="booking-workspace" id="booking-workspace" inert aria-busy="true">
+          <div class="booking-form-card">
+            <ol class="booking-steps" aria-label="Booking progress">
+              <li class="is-current" id="step-details" aria-current="step"><span>01</span> Your session</li>
+              <li id="step-review"><span>02</span> Review & confirm</li>
+            </ol>
+
+            <p class="booking-notice" id="booking-notice" role="status" hidden></p>
+            <div id="details-panel">
+              <h2 id="details-heading" tabindex="-1">Let’s get you started.</h2>
+              <p class="booking-panel-intro" id="booking-intro">Preparing your booking…</p>
+              <form id="booking-form" novalidate>
+                <fieldset class="booking-type">
+                  <legend class="booking-field-label">Session type</legend>
+                  <div class="booking-type-options">
+                    <label class="booking-type-option">
+                      <input type="radio" name="kind" value="intro" checked />
+                      <span><strong>First visit</strong><small>A tour & a plan for your goals</small></span>
+                      <span class="booking-radio-mark" aria-hidden="true"></span>
+                    </label>
+                    <label class="booking-type-option">
+                      <input type="radio" name="kind" value="class" />
+                      <span><strong>Group class</strong><small>Join a coach-led session</small></span>
+                      <span class="booking-radio-mark" aria-hidden="true"></span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <div id="class-fields" hidden>
+                  <div class="booking-field">
+                    <label for="class-select">Choose a class</label>
+                    <select id="class-select" name="classId" aria-describedby="class-select-error"></select>
+                    <p class="booking-field-error" id="class-select-error"></p>
+                  </div>
+                  <div class="booking-class-slot" id="class-slot" aria-live="polite"></div>
+                  <p class="booking-field-hint">Browse other classes and dates in the <a href="./schedule.html">full schedule →</a></p>
+                </div>
+
+                <div id="intro-fields">
+                  <div class="booking-field-row">
+                    <div class="booking-field">
+                      <label for="intro-date">Visit date</label>
+                      <input id="intro-date" name="date" type="date" aria-describedby="intro-date-hint intro-date-error" />
+                      <p class="booking-field-hint" id="intro-date-hint">Choose a day in the next 30 days.</p>
+                      <p class="booking-field-error" id="intro-date-error"></p>
+                    </div>
+                    <div class="booking-field">
+                      <label for="intro-time">Visit time</label>
+                      <select id="intro-time" name="time" aria-describedby="intro-time-hint intro-time-error">
+                        <option value="09:00">09:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="17:00">17:00</option>
+                        <option value="19:00">19:00</option>
+                      </select>
+                      <p class="booking-field-hint" id="intro-time-hint">Times follow your device’s local time.</p>
+                      <p class="booking-field-error" id="intro-time-error"></p>
+                    </div>
+                  </div>
+                  <div class="booking-field-row">
+                    <div class="booking-field">
+                      <label for="plan-select">Membership interest</label>
+                      <select id="plan-select" name="plan" aria-describedby="plan-select-error"></select>
+                      <p class="booking-field-error" id="plan-select-error"></p>
+                    </div>
+                    <div class="booking-field">
+                      <label for="billing-select">Billing preference</label>
+                      <select id="billing-select" name="billing" aria-describedby="billing-select-error">
+                        <option value="monthly">Monthly</option>
+                        <option value="annual">Annual</option>
+                      </select>
+                      <p class="booking-field-error" id="billing-select-error"></p>
+                    </div>
+                  </div>
+                  <p class="booking-field-hint booking-plan-hint">A first visit is free. Choosing a plan does not start a membership or charge you.</p>
+                </div>
+
+                <div class="booking-contact">
+                  <h3>A little about you</h3>
+                  <div class="booking-field-row">
+                    <div class="booking-field">
+                      <label for="booking-name">Your name</label>
+                      <input id="booking-name" name="name" type="text" autocomplete="name" maxlength="80" required aria-describedby="booking-name-error" placeholder="Alex Morgan" />
+                      <p class="booking-field-error" id="booking-name-error"></p>
+                    </div>
+                    <div class="booking-field">
+                      <label for="booking-email">Email address</label>
+                      <input id="booking-email" name="email" type="email" autocomplete="email" maxlength="254" required aria-describedby="booking-email-error" placeholder="alex@example.com" />
+                      <p class="booking-field-error" id="booking-email-error"></p>
+                    </div>
+                  </div>
+                  <div class="booking-field-row">
+                    <div class="booking-field">
+                      <label for="booking-goal">Main goal <span>(optional)</span></label>
+                      <select id="booking-goal" name="goal">
+                        <option value="">I’m still exploring</option>
+                        <option value="Build strength">Build strength</option>
+                        <option value="Improve endurance">Improve endurance</option>
+                        <option value="Move and feel better">Move and feel better</option>
+                        <option value="Create a consistent routine">Create a consistent routine</option>
+                      </select>
+                    </div>
+                    <div class="booking-field">
+                      <label for="booking-experience">Training experience <span>(optional)</span></label>
+                      <select id="booking-experience" name="experience">
+                        <option value="">Prefer not to say</option>
+                        <option value="New to training">New to training</option>
+                        <option value="Getting back into it">Getting back into it</option>
+                        <option value="Train regularly">Train regularly</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <p class="booking-demo-note">Portfolio demo: nothing is sent. Your name and email stay on this page and are not saved.</p>
+                <button type="submit" class="btn btn-dark booking-next">Review your session <span aria-hidden="true">→</span></button>
+              </form>
+            </div>
+
+            <div id="review-panel" hidden>
+              <h2 id="review-heading" tabindex="-1">One last look.</h2>
+              <p class="booking-panel-intro">Check your details before saving the session.</p>
+              <dl class="booking-review" id="booking-review"></dl>
+              <p class="booking-demo-note">Confirmation saves session details in this browser only. No booking is sent to a gym, no email is delivered, and no payment is taken.</p>
+              <p class="booking-action-error" id="confirm-error" role="alert" hidden></p>
+              <div class="booking-review-actions">
+                <button type="button" class="btn btn-outline-dark" id="back-to-details">Edit details</button>
+                <button type="button" class="btn btn-primary" id="confirm-booking">Confirm session <span aria-hidden="true">✓</span></button>
+              </div>
+            </div>
+
+            <div class="booking-success" id="success-panel" hidden>
+              <span class="booking-success-mark" aria-hidden="true">✓</span>
+              <span class="section-label">Your next move is set</span>
+              <h2 id="success-heading" tabindex="-1">Session saved.</h2>
+              <p id="success-session"></p>
+              <div class="booking-success-prep">
+                <h3>Pack light. Show up ready.</h3>
+                <p>Bring a water bottle, comfortable training clothes and clean indoor shoes. Arrive 10 minutes before your session.</p>
+              </div>
+              <p class="booking-demo-note">This is a local demo booking, not a reservation at a real gym. Find it in “My sessions” on the schedule. Your personal details have not been stored or sent.</p>
+              <a class="btn btn-primary" href="./schedule.html#my-sessions">View my sessions <span aria-hidden="true">→</span></a>
+              <button class="booking-cancel" type="button" id="cancel-booking">Cancel this saved session</button>
+              <p class="booking-action-error" id="cancel-error" role="alert" hidden></p>
+              <p class="booking-cancel-status" id="cancel-status" role="status"></p>
+            </div>
+          </div>
+
+          <aside class="booking-summary-card" aria-label="Your session overview">
+            <div class="booking-summary-top"><span class="booking-summary-dot" aria-hidden="true"></span> THE WORK STARTS HERE</div>
+            <p class="booking-summary-kicker" id="summary-kind">First visit</p>
+            <h2 id="summary-title">Find your starting point.</h2>
+            <p class="booking-summary-description" id="summary-description">Meet the space, talk through your goals and see what training could look like for you.</p>
+            <dl class="booking-summary-details" id="summary-details">
+              <div><dt>Date</dt><dd>Choose a date</dd></div>
+              <div><dt>Time</dt><dd>Choose a time</dd></div>
+              <div><dt>Duration</dt><dd>30 minutes</dd></div>
+              <div><dt>First visit</dt><dd>Free</dd></div>
+              <div><dt>Plan preference</dt><dd>Choose a membership</dd></div>
+            </dl>
+            <div class="booking-summary-bottom">
+              <span aria-hidden="true">↗</span>
+              <p>Good training starts with<br /><strong>one small commitment.</strong></p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer class="booking-footer">
+      <div class="container booking-footer-inner">
+        <p>© <span data-year>2026</span> PowerGym. A fitness website concept.</p>
+        <div><a href="./index.html">Home</a><a href="./schedule.html">Schedule</a><a href="./index.html#programs">Memberships</a></div>
+      </div>
+    </footer>
+    <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+    <script type="module" src="./assets/scripts/app.js"></script>
+    <script type="module">
+      import("./assets/scripts/pages/booking.js").catch(() => {
+        document.documentElement.classList.add("booking-unavailable");
+      });
+    </script>
+  </body>
+</html>

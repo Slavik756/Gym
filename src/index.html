@@ -3,65 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>document.documentElement.classList.add("js");</script>
 
     <meta
       name="description"
-      content="PowerGym — modern fitness club with professional trainers, modern equipment and effective workout programs."
+      content="Explore the PowerGym fitness club concept: workouts, membership plans, a weekly class schedule and an interactive booking experience."
     />
 
     <title>PowerGym — Train Strong. Live Strong.</title>
 
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/styles/base.css" />
+    <link rel="stylesheet" href="./assets/styles/components/header.css" />
+    <link rel="stylesheet" href="./assets/styles/components/dialog.css" />
+    <link rel="stylesheet" href="./assets/styles/pages/home.css" />
   </head>
 
-  <body>
+  <body data-page="home">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- ================= HEADER ================= -->
 
-    <header class="header" id="home">
-      <div class="container header-container">
-        <a href="#home" class="logo">
-          <img
-            src="./img/logo-1.png"
-            alt="PowerGym logo"
-            width="66"
-            height="52"
-          />
-          <span>POWER<span>GYM</span></span>
-        </a>
+    <!-- shared-header -->
 
-        <nav class="main-nav" id="mainNav">
-          <ul class="main-nav-list">
-            <li><a class="nav-item active" href="#home">Home</a></li>
-            <li><a class="nav-item" href="#about">About</a></li>
-            <li><a class="nav-item" href="#workouts">Workouts</a></li>
-            <li><a class="nav-item" href="#programs">Programs</a></li>
-            <li><a class="nav-item" href="#reviews">Reviews</a></li>
-            <li><a class="nav-item" href="#contact">Contact</a></li>
-          </ul>
-
-          <button class="mobile-join" type="button">Join now</button>
-        </nav>
-
-        <a href="#programs" class="btn btn-primary header-btn"> Join now </a>
-
-        <button
-          class="burger"
-          id="burger"
-          type="button"
-          aria-label="Open menu"
-          aria-expanded="false"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </header>
-
-    <main>
+    <main id="main-content">
       <!-- ================= HERO ================= -->
 
-      <section class="hero">
+      <section class="hero" id="home">
         <div class="container hero-container">
           <div class="hero-content">
             <span class="eyebrow">
@@ -82,19 +49,19 @@
             </p>
 
             <div class="hero-buttons">
-              <a href="#programs" class="btn btn-primary">
-                Start training
+              <a href="./booking.html" class="btn btn-primary">
+                Book your first visit
                 <span>→</span>
               </a>
 
-              <a href="#workouts" class="btn btn-outline"> Explore workouts </a>
+              <a href="./schedule.html" class="btn btn-outline"> Find your next class </a>
             </div>
 
             <div class="hero-rating">
-              <div class="avatars">
-                <img src="./img/man.png" alt="Gym member" />
-                <img src="./img/woman.png" alt="Gym member" />
-                <img src="./img/man.png" alt="Gym member" />
+              <div class="avatars" aria-hidden="true">
+                <span class="member-avatar">AM</span>
+                <span class="member-avatar">SW</span>
+                <span class="member-avatar">DC</span>
                 <span>+</span>
               </div>
 
@@ -109,7 +76,7 @@
             <div class="hero-glow"></div>
 
             <div class="hero-image">
-              <img src="./img/gym-1.png" alt="Person training in the gym" />
+              <img src="/images/athlete-hero.jpg" alt="Athlete resting between sets in a strength-training gym" width="1254" height="1254" fetchpriority="high" decoding="async" />
             </div>
 
             <div class="hero-badge badge-top">
@@ -160,11 +127,11 @@
         <div class="container about-grid">
           <div class="about-images">
             <div class="about-main-image image-frame">
-              <img src="./img/gym-2.png" alt="Modern gym" />
+              <img src="/images/club-interior.jpg" alt="Sunlit gym with dumbbells, benches and a squat rack" width="1536" height="1024" loading="lazy" decoding="async" />
             </div>
 
             <div class="about-small-image image-frame">
-              <img src="./img/Modern.png" alt="Modern gym equipment" />
+              <img src="/images/club-interior.jpg" alt="Dumbbell rack and strength-training equipment" width="1536" height="1024" loading="lazy" decoding="async" />
             </div>
 
             <div class="experience-card">
@@ -190,7 +157,7 @@
             <div class="benefits">
               <article class="benefit">
                 <div class="benefit-icon">
-                  <img src="./img/Professional.png" alt="" />
+                  <svg viewBox="0 0 48 48" aria-hidden="true"><use href="/icons/training.svg#coach"></use></svg>
                 </div>
                 <div>
                   <h3>Professional trainers</h3>
@@ -202,7 +169,7 @@
 
               <article class="benefit">
                 <div class="benefit-icon">
-                  <img src="./img/Modern.png" alt="" />
+                  <svg viewBox="0 0 48 48" aria-hidden="true"><use href="/icons/training.svg#strength"></use></svg>
                 </div>
                 <div>
                   <h3>Premium equipment</h3>
@@ -214,7 +181,7 @@
 
               <article class="benefit">
                 <div class="benefit-icon">
-                  <span>24</span>
+                  <svg viewBox="0 0 48 48" aria-hidden="true"><use href="/icons/training.svg#clock"></use></svg>
                 </div>
                 <div>
                   <h3>Open 24/7</h3>
@@ -224,7 +191,7 @@
 
               <article class="benefit">
                 <div class="benefit-icon">
-                  <span>★</span>
+                  <svg viewBox="0 0 48 48" aria-hidden="true"><use href="/icons/training.svg#group"></use></svg>
                 </div>
                 <div>
                   <h3>Friendly community</h3>
@@ -261,79 +228,91 @@
           <div class="workout-grid">
             <article class="workout-card">
               <div class="workout-image">
-                <img src="./img/Strength.png" alt="Strength training" />
+                <svg viewBox="0 0 48 48" aria-hidden="true"><use href="/icons/training.svg#strength"></use></svg>
               </div>
 
               <div class="workout-info">
                 <span>01</span>
                 <h3>Strength Training</h3>
                 <p>Build muscle, power and confidence.</p>
-                <a href="#programs">Explore →</a>
+                <button class="workout-details" type="button" data-workout="Strength Training" aria-haspopup="dialog">
+                  View program <span aria-hidden="true">↗</span>
+                </button>
               </div>
             </article>
 
             <article class="workout-card">
               <div class="workout-image">
-                <img src="./img/Cardio.png" alt="Cardio workout" />
+                <svg viewBox="0 0 48 48" aria-hidden="true"><use href="/icons/training.svg#cardio"></use></svg>
               </div>
 
               <div class="workout-info">
                 <span>02</span>
                 <h3>Cardio</h3>
                 <p>Improve endurance and burn calories.</p>
-                <a href="#programs">Explore →</a>
+                <button class="workout-details" type="button" data-workout="Cardio" aria-haspopup="dialog">
+                  View program <span aria-hidden="true">↗</span>
+                </button>
               </div>
             </article>
 
             <article class="workout-card">
               <div class="workout-image">
-                <img src="./img/Yoga.png" alt="Yoga" />
+                <svg viewBox="0 0 48 48" aria-hidden="true"><use href="/icons/training.svg#yoga"></use></svg>
               </div>
 
               <div class="workout-info">
                 <span>03</span>
                 <h3>Yoga</h3>
                 <p>Improve flexibility and find your balance.</p>
-                <a href="#programs">Explore →</a>
+                <button class="workout-details" type="button" data-workout="Yoga" aria-haspopup="dialog">
+                  View program <span aria-hidden="true">↗</span>
+                </button>
               </div>
             </article>
 
             <article class="workout-card">
               <div class="workout-image">
-                <img src="./img/Pilates.png" alt="Pilates" />
+                <svg viewBox="0 0 48 48" aria-hidden="true"><use href="/icons/training.svg#pilates"></use></svg>
               </div>
 
               <div class="workout-info">
                 <span>04</span>
                 <h3>Pilates</h3>
                 <p>Strengthen your core and improve posture.</p>
-                <a href="#programs">Explore →</a>
+                <button class="workout-details" type="button" data-workout="Pilates" aria-haspopup="dialog">
+                  View program <span aria-hidden="true">↗</span>
+                </button>
               </div>
             </article>
 
             <article class="workout-card">
               <div class="workout-image">
-                <img src="./img/Boxing.png" alt="Boxing" />
+                <svg viewBox="0 0 48 48" aria-hidden="true"><use href="/icons/training.svg#boxing"></use></svg>
               </div>
 
               <div class="workout-info">
                 <span>05</span>
                 <h3>Boxing</h3>
                 <p>Release energy and develop speed.</p>
-                <a href="#programs">Explore →</a>
+                <button class="workout-details" type="button" data-workout="Boxing" aria-haspopup="dialog">
+                  View program <span aria-hidden="true">↗</span>
+                </button>
               </div>
             </article>
 
             <article class="workout-card">
               <div class="workout-image">
-                <img src="./img/Group.png" alt="Group fitness" />
+                <svg viewBox="0 0 48 48" aria-hidden="true"><use href="/icons/training.svg#group"></use></svg>
               </div>
 
               <div class="workout-info">
                 <span>06</span>
                 <h3>Group Fitness</h3>
                 <p>Train together and stay motivated.</p>
-                <a href="#programs">Explore →</a>
+                <button class="workout-details" type="button" data-workout="Group Fitness" aria-haspopup="dialog">
+                  View program <span aria-hidden="true">↗</span>
+                </button>
               </div>
             </article>
           </div>
@@ -352,11 +331,18 @@
             <p>Simple membership options designed for every fitness level.</p>
           </div>
 
+          <div class="billing-switch" role="group" aria-label="Membership billing period">
+            <button type="button" data-billing="monthly" aria-pressed="true">Monthly</button>
+            <button type="button" data-billing="annual" aria-pressed="false">Annually <span>Save ~20%</span></button>
+          </div>
+          <p class="billing-caption" id="billing-caption" aria-live="polite">Pay monthly. Find the plan that fits your routine.</p>
+
           <div class="pricing-grid">
             <article class="price-card">
               <span class="plan-name">STARTER</span>
 
-              <h3>$29<span>/month</span></h3>
+              <h3><span class="price-value" data-price="starter">$29</span><span>/month</span></h3>
+              <p class="plan-billing" data-plan-billing="starter">Billed monthly</p>
 
               <p class="plan-description">
                 Everything you need to start your fitness journey.
@@ -369,7 +355,7 @@
                 <li>✓ Free Wi-Fi</li>
               </ul>
 
-              <a href="#contact" class="btn btn-outline-dark">
+              <a href="./booking.html?plan=starter&amp;billing=monthly" data-plan-link="starter" class="btn btn-outline-dark">
                 Choose Starter
               </a>
             </article>
@@ -379,7 +365,8 @@
 
               <span class="plan-name">PRO</span>
 
-              <h3>$49<span>/month</span></h3>
+              <h3><span class="price-value" data-price="pro">$49</span><span>/month</span></h3>
+              <p class="plan-billing" data-plan-billing="pro">Billed monthly</p>
 
               <p class="plan-description">
                 The complete experience for serious progress.
@@ -393,13 +380,14 @@
                 <li>✓ Sauna & recovery area</li>
               </ul>
 
-              <a href="#contact" class="btn btn-primary"> Choose Pro </a>
+              <a href="./booking.html?plan=pro&amp;billing=monthly" data-plan-link="pro" class="btn btn-primary"> Choose Pro </a>
             </article>
 
             <article class="price-card">
               <span class="plan-name">ELITE</span>
 
-              <h3>$79<span>/month</span></h3>
+              <h3><span class="price-value" data-price="elite">$79</span><span>/month</span></h3>
+              <p class="plan-billing" data-plan-billing="elite">Billed monthly</p>
 
               <p class="plan-description">
                 Maximum support and personalized attention.
@@ -412,7 +400,7 @@
                 <li>✓ Monthly progress analysis</li>
               </ul>
 
-              <a href="#contact" class="btn btn-outline-dark"> Choose Elite </a>
+              <a href="./booking.html?plan=elite&amp;billing=monthly" data-plan-link="elite" class="btn btn-outline-dark"> Choose Elite </a>
             </article>
           </div>
         </div>
@@ -436,8 +424,9 @@
 
           <div class="trainer-grid">
             <article class="trainer-card">
-              <div class="trainer-image">
-                <img src="./img/man.png" alt="Personal trainer" />
+              <div class="trainer-image trainer-monogram" aria-hidden="true">
+                <span>AM</span>
+                <small>Strength</small>
               </div>
 
               <div class="trainer-info">
@@ -452,8 +441,9 @@
             </article>
 
             <article class="trainer-card">
-              <div class="trainer-image">
-                <img src="./img/woman.png" alt="Fitness trainer" />
+              <div class="trainer-image trainer-monogram" aria-hidden="true">
+                <span>SW</span>
+                <small>Mobility</small>
               </div>
 
               <div class="trainer-info">
@@ -468,8 +458,9 @@
             </article>
 
             <article class="trainer-card">
-              <div class="trainer-image">
-                <img src="./img/man.png" alt="Fitness coach" />
+              <div class="trainer-image trainer-monogram" aria-hidden="true">
+                <span>DC</span>
+                <small>Performance</small>
               </div>
 
               <div class="trainer-info">
@@ -514,7 +505,7 @@
               </blockquote>
 
               <div class="review-person">
-                <img src="./img/man.png" alt="Dmitry Ivanov" />
+                <span class="review-avatar" aria-hidden="true">DI</span>
 
                 <div>
                   <strong>Dmitry Ivanov</strong>
@@ -532,7 +523,7 @@
               </blockquote>
 
               <div class="review-person">
-                <img src="./img/woman.png" alt="Emily Davis" />
+                <span class="review-avatar" aria-hidden="true">ED</span>
 
                 <div>
                   <strong>Emily Davis</strong>
@@ -550,7 +541,7 @@
               </blockquote>
 
               <div class="review-person">
-                <img src="./img/man.png" alt="Michael Brown" />
+                <span class="review-avatar" aria-hidden="true">MB</span>
 
                 <div>
                   <strong>Michael Brown</strong>
@@ -564,7 +555,7 @@
 
       <!-- ================= FAQ ================= -->
 
-      <section class="faq section">
+      <section class="faq section" id="faq">
         <div class="container faq-grid">
           <div>
             <span class="section-label">FAQ</span>
@@ -576,7 +567,7 @@
 
             <p>Everything you need to know before your first workout.</p>
 
-            <a href="#contact" class="btn btn-dark"> Ask us anything → </a>
+            <a href="./booking.html" class="btn btn-dark"> Plan your first visit → </a>
           </div>
 
           <div class="faq-list">
@@ -643,28 +634,28 @@
               <span>is waiting.</span>
             </h2>
 
-            <p>Join PowerGym today and get 15% off your first month.</p>
-
-            <div class="cta-form">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                aria-label="Email address"
-              />
-
-              <button class="btn btn-primary" type="button">
-                Get started
-                <span>→</span>
-              </button>
+            <p>Start with a tour, meet a coach and find your training rhythm.</p>
+            <div class="cta-actions">
+              <a class="btn btn-dark" href="./booking.html">Book an intro visit <span aria-hidden="true">↗</span></a>
+              <a class="cta-text-link" href="./schedule.html">Explore the class schedule →</a>
             </div>
-
-            <small>
-              No spam. Just useful fitness tips and special offers.
-            </small>
+            <small>Portfolio concept. Bookings are saved in your browser for demonstration.</small>
           </div>
         </div>
       </section>
     </main>
+
+    <dialog class="modal-dialog" id="workout-modal" aria-labelledby="modal-title" aria-describedby="modal-text">
+        <button class="modal-close" type="button" data-close-modal aria-label="Close workout details">×</button>
+        <p class="modal-kicker">POWERGYM TRAINING</p>
+        <h2 id="modal-title">Workout</h2>
+        <p id="modal-text"></p>
+        <a class="btn btn-primary" id="modal-action" href="./schedule.html">Find a class <span aria-hidden="true">→</span></a>
+    </dialog>
+
+    <button class="back-to-top" type="button" aria-label="Back to top">
+      <span aria-hidden="true">↑</span>
+    </button>
 
     <!-- ================= FOOTER ================= -->
 
@@ -674,7 +665,7 @@
           <div class="footer-brand">
             <a href="#home" class="logo">
               <img
-                src="./img/logo-1.png"
+                src="/icons/logo-mark.svg"
                 alt="PowerGym logo"
                 width="66"
                 height="52"
@@ -684,19 +675,7 @@
 
             <p>Train hard. Stay healthy. Become unstoppable.</p>
 
-            <div class="socials">
-              <a href="#">
-                <img src="img/facebook.svg" alt="Facebook" />
-              </a>
-
-              <a href="#">
-                <img src="img/instagram.svg" alt="Instagram" />
-              </a>
-
-              <a href="#">
-                <img src="img/x.svg" alt="X" />
-              </a>
-            </div>
+            <a class="footer-project" href="https://github.com/Slavik756/Gym" target="_blank" rel="noopener noreferrer">View project on GitHub ↗</a>
           </div>
 
           <div class="footer-column">
@@ -711,30 +690,27 @@
           <div class="footer-column">
             <h3>Support</h3>
 
-            <a href="#">Contact us</a>
-            <a href="#">Privacy policy</a>
-            <a href="#">Terms of service</a>
-            <a href="#">Cookies</a>
+            <a href="./booking.html">Book a visit</a>
+            <a href="./schedule.html">Class schedule</a>
+            <a href="#faq">Frequently asked questions</a>
           </div>
 
           <div class="footer-column">
-            <h3>Contact</h3>
-
-            <p>123 Fitness Street</p>
-            <p>New York, NY 10001</p>
-            <a href="tel:+10000000000">+1 000 000 0000</a>
-            <a href="mailto:hello@powergym.com"> hello@powergym.com </a>
+            <h3>About this concept</h3>
+            <p>A fictional fitness club, built as a frontend portfolio project.</p>
+            <p>Club information, prices and member stories are sample content.</p>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <p>© 2026 PowerGym. All rights reserved.</p>
+          <p>© 2026 PowerGym · Portfolio concept</p>
 
           <p>Made for stronger people.</p>
         </div>
       </div>
     </footer>
 
-    <script src="./js/script.js"></script>
+    <script type="module" src="./assets/scripts/app.js"></script>
+    <script type="module" src="./assets/scripts/pages/home.js"></script>
   </body>
 </html>

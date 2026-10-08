@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>document.documentElement.classList.add("js");</script>
+    <meta name="description" content="Find your next PowerGym class. Explore strength, conditioning and recovery sessions, filter the weekly schedule and save your place." />
+    <title>Class Schedule — PowerGym</title>
+    <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/styles/base.css" />
+    <link rel="stylesheet" href="./assets/styles/components/header.css" />
+    <link rel="stylesheet" href="./assets/styles/pages/schedule.css" />
+    <script src="./assets/scripts/app.js" type="module"></script>
+    <script src="./assets/scripts/pages/schedule.js" type="module"></script>
+  </head>
+  <body class="inner-page schedule-page" data-page="schedule">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <!-- shared-header -->
+
+    <main id="main-content">
+      <section class="schedule-hero" aria-labelledby="schedule-title">
+        <div class="container schedule-hero-grid">
+          <div class="schedule-hero-copy">
+            <a class="schedule-breadcrumb" href="./index.html"><span aria-hidden="true">←</span> Back to the club</a>
+            <p class="section-label">YOUR WEEK, A LITTLE STRONGER</p>
+            <h1 id="schedule-title">Make time.<br /><span>Make progress.</span></h1>
+            <p class="schedule-intro">A good session starts with showing up. Find a class that fits your day, your pace and your goals.</p>
+            <a class="schedule-saved-link" href="#my-sessions">My saved sessions <span class="saved-count" id="savedCount">0</span> <span aria-hidden="true">↗</span></a>
+          </div>
+          <aside class="schedule-week-card" aria-label="About the weekly schedule">
+            <div class="week-card-heading"><span class="week-card-dot" aria-hidden="true"></span> ON THE SCHEDULE</div>
+            <div class="week-card-mark" aria-hidden="true">01—07</div>
+            <p>One week.<br />Plenty of ways to move.</p>
+            <div class="week-card-stats">
+              <div><strong id="weeklyClassCount">—</strong><span>weekly sessions</span></div>
+              <div><strong id="disciplineCount">—</strong><span>training styles</span></div>
+            </div>
+            <div class="week-card-footnote"><span aria-hidden="true">↗</span> All levels. Your own pace.</div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="schedule-section" aria-labelledby="classes-title">
+        <div class="container">
+          <div class="schedule-section-heading">
+            <div><span class="section-label">FIND YOUR SESSION</span><h2 id="classes-title">The next seven days.</h2></div>
+            <p>Each class shows its next available session.<br />Times use your device’s local time.</p>
+          </div>
+
+          <div class="schedule-filters" id="scheduleFilters">
+            <fieldset class="schedule-days">
+              <legend>Filter by day</legend>
+              <div class="schedule-day-list">
+                <button class="day-filter is-selected" type="button" data-day="all" aria-pressed="true">All days</button>
+                <button class="day-filter" type="button" data-day="1" aria-pressed="false"><span class="day-full">Monday</span><span class="day-short" aria-hidden="true">Mon</span></button>
+                <button class="day-filter" type="button" data-day="2" aria-pressed="false"><span class="day-full">Tuesday</span><span class="day-short" aria-hidden="true">Tue</span></button>
+                <button class="day-filter" type="button" data-day="3" aria-pressed="false"><span class="day-full">Wednesday</span><span class="day-short" aria-hidden="true">Wed</span></button>
+                <button class="day-filter" type="button" data-day="4" aria-pressed="false"><span class="day-full">Thursday</span><span class="day-short" aria-hidden="true">Thu</span></button>
+                <button class="day-filter" type="button" data-day="5" aria-pressed="false"><span class="day-full">Friday</span><span class="day-short" aria-hidden="true">Fri</span></button>
+                <button class="day-filter" type="button" data-day="6" aria-pressed="false"><span class="day-full">Saturday</span><span class="day-short" aria-hidden="true">Sat</span></button>
+                <button class="day-filter" type="button" data-day="0" aria-pressed="false"><span class="day-full">Sunday</span><span class="day-short" aria-hidden="true">Sun</span></button>
+              </div>
+            </fieldset>
+            <div class="schedule-category-field">
+              <label for="categoryFilter">Training style</label>
+              <select id="categoryFilter"><option value="all">All training styles</option></select>
+            </div>
+          </div>
+
+          <div class="schedule-results-bar">
+            <p id="resultsCount" role="status" aria-live="polite" aria-atomic="true">Loading the schedule…</p>
+            <button class="schedule-text-button" id="resetFilters" type="button" hidden>Clear filters <span aria-hidden="true">↺</span></button>
+          </div>
+          <div class="class-grid" id="classGrid"></div>
+          <div class="schedule-empty" id="scheduleEmpty" hidden>
+            <span class="empty-mark" aria-hidden="true">↗</span>
+            <h3>A different day, a fresh start.</h3>
+            <p>No sessions match these filters. Try another training style or explore the full week.</p>
+            <button class="btn btn-dark" type="button" id="emptyReset">Show all sessions</button>
+          </div>
+          <noscript><p class="schedule-noscript">Enable JavaScript to explore and filter the class schedule, or <a href="./index.html#workouts">explore workout options on the club page</a>.</p></noscript>
+          <div class="schedule-help">
+            <span class="schedule-help-icon" aria-hidden="true"></span>
+            <div><strong>First time here?</strong><p>Come ten minutes early. Bring water and comfortable training shoes. Your coach will help you settle in.</p></div>
+            <a href="./booking.html">Book an introduction <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="saved-sessions-section" id="my-sessions" aria-labelledby="saved-title">
+        <div class="container">
+          <div class="schedule-section-heading">
+            <div><span class="section-label">KEEP YOUR MOMENTUM</span><h2 id="saved-title" tabindex="-1">My saved sessions.</h2></div>
+            <p>Your classes and introductory visits, in one place.<br />Plans change — you can cancel a saved session here.</p>
+          </div>
+          <p id="savedStatus" class="saved-status" role="status" aria-live="polite" aria-atomic="true"></p>
+          <div class="saved-session-list" id="savedSessionList"></div>
+          <div class="saved-empty" id="savedEmpty"><span aria-hidden="true">↗</span><div><h3>Your next session is waiting.</h3><p>Choose a class above to add it to your week.</p></div><a class="btn btn-outline-dark" href="#classes-title">Explore the schedule</a></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="schedule-footer">
+      <div class="container schedule-footer-grid">
+        <a href="./index.html" class="logo"><img src="/icons/logo-mark.svg" alt="" width="66" height="52" /><span>POWER<span>GYM</span></span></a>
+        <nav aria-label="Footer navigation"><a href="./index.html">The club</a><a href="./schedule.html" aria-current="page">Schedule</a><a href="./booking.html">Book a visit</a></nav>
+        <p>Portfolio demo. Saved sessions stay on this device and do not reserve a place at a real club.</p>
+      </div>
+    </footer>
+    <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+    <header class="header">
+      <div class="container header-container">
+        <a href="{{home-href}}" class="logo" aria-label="PowerGym home">
+          <img src="/icons/logo-mark.svg" alt="" width="66" height="52" />
+          <span>POWER<span>GYM</span></span>
+        </a>
+        <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
+          <ul class="main-nav-list">
+            <li><a class="nav-item{{home-active}}" data-nav-key="home" href="{{home-href}}"{{home-state}}>Home</a></li>
+            <li><a class="nav-item" data-nav-key="about" href="{{about-href}}"{{about-state}}>About</a></li>
+            <li><a class="nav-item" data-nav-key="workouts" href="{{workouts-href}}"{{workouts-state}}>Workouts</a></li>
+            <li><a class="nav-item" data-nav-key="memberships" href="{{memberships-href}}"{{memberships-state}}>Memberships</a></li>
+            <li><a class="nav-item{{schedule-active}}" data-nav-key="schedule" href="./schedule.html"{{schedule-state}}>Schedule</a></li>
+            <li><a class="nav-item{{booking-active}}" data-nav-key="booking" href="./booking.html"{{booking-state}}>Book a visit</a></li>
+          </ul>
+          <a class="mobile-join" href="./booking.html">Book a visit <span aria-hidden="true">↗</span></a>
+        </nav>
+        <a href="./booking.html" class="btn btn-primary header-btn">Book a visit <span aria-hidden="true">↗</span></a>
+        <button class="burger" id="burger" type="button" aria-label="Open menu" aria-controls="mainNav" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
