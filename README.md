@@ -1,5 +1,7 @@
 # PowerGym
 
+[Открыть демо](https://gym-orpin-mu.vercel.app/) · [Расписание](https://gym-orpin-mu.vercel.app/schedule.html) · [Запись на тренировку](https://gym-orpin-mu.vercel.app/booking.html)
+
 Многостраничный сайт вымышленного фитнес-клуба: знакомство с клубом, расписание занятий и запись на тренировку. Интерфейс написан на HTML, CSS и JavaScript без UI-фреймворков. Vite отвечает за разработку и сборку; готовый сайт не требует зависимостей во время работы в браузере.
 
 ![Расписание PowerGym с фильтрами по дням и направлениям](docs/screenshots/schedule.png)
